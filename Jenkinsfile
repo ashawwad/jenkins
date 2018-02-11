@@ -2,10 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage ('\u001B[31m Build Stage') {
-            steps {
-                echo 'Build Stage'
-            } 
+        wrap([$class: 'AnsiColorBuildWrapper']) {
+            stage ('\u001B[31m Build Stage') {
+                steps {
+                    echo 'Build Stage'
+                } 
+            }
         }
 
         stage ('Testing Stage') {

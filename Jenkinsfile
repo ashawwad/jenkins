@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage ('Build Stage') {
+        stage ('\u001B[31m Build Stage') {
             steps {
                 echo 'Build Stage'
             } 
